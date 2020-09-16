@@ -1,22 +1,56 @@
 <ons-page class="carousel">
-  <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
-    <ons-carousel-item>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <ons-carousel fullscreen auto-scroll overscrollable id="carousel">
+    <ons-carousel-item class="mySlides fade">
       <div>
         <img src="img/DAL_v15_Cover.jpg" width="100%" height="100%">
       </div>
-      <div>
-        Date a live
-      </div>
     </ons-carousel-item>
-    <ons-carousel-item>
+    <ons-carousel-item class="mySlides fade">
       <div>
         <img src="img/Konosuba_v16_Cover.jpg" width="100%" height="100%">
       </div>
     </ons-carousel-item>
-    <ons-carousel-item>
+    <ons-carousel-item class="mySlides fade">
       <div>
-        <img src="img/Mami.png" width="100%" height="100%">
+        <img src="img/crote_v10_Cover.jpg" width="100%" height="100%">
+      </div>
+    </ons-carousel-item>
+    <ons-carousel-item class="mySlides fade">
+      <div>
+        <img src="img/RokuakuCover10.jpg" width="100%" height="100%">
+      </div>
+    </ons-carousel-item>
+    <ons-carousel-item class="mySlides fade">
+      <div>
+        <img src="img/MaoGakuenCover7.jpg" width="100%" height="100%">
       </div>
     </ons-carousel-item>
   </ons-carousel>
+  <script>
+      var slideIndex = 0;
+      showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" actived", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " actived";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }</script>
 </ons-page>
