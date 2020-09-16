@@ -1,5 +1,5 @@
 .toolbar{
-    background-color: darkmagenta;
+    background-color: green;
     color: whitesmoke;
     font-family: "Myriad Pro";
     margin: auto;
@@ -8,8 +8,8 @@
     font-size:25px;
 }
 .tabbar{
-    background-color: darkorchid;
+    background-color: lightgreen;
 }
 .carousel{
-    height: 50%;
+    height: 74%;
 }
