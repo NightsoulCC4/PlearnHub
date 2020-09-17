@@ -1,4 +1,9 @@
-var slideIndex = 0;
+document.addEventListener('init', function(event) {
+  var page = event.target;
+  console.log(page.id);
+
+  if (page.id === 'Tab1') {
+    var slideIndex = 0;
 showSlides();
 
 function showSlides() {
@@ -17,3 +22,11 @@ function showSlides() {
   dots[slideIndex-1].className += " actived";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+    //JS of tab1
+  } else if (page.id === 'Tab2') {
+    // JS of tab2
+    // document.getElementById("tab2alert").onclick = function () {
+    //   ons.notification.alert('Alert in Tab 2');
+    // }
+  }
+});
